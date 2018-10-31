@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.mouse-phenotype</groupId>
+	<artifactId>behavior_</artifactId>
+	<version>FZ130121</version>
+	<packaging>jar</packaging>
+
+	<name>ImageFZ</name>
+	<description>ImageFZ is an ImageJ plugin for the fear conditioning test.</description>
+	<url>http://www.mouse-phenotype.org/</url>
+	<inceptionYear>2013</inceptionYear>
+	<organization>
+		<name>Mouse Phenotype Database</name>
+		<url>http://www.mouse-phenotype.org/</url>
+	</organization>
+
+	<properties>
+		<project.build.sourceEncoding>Shift_JIS</project.build.sourceEncoding>
+		<java.version>1.6</java.version>
+	</properties>
+
+	<build>
+		<finalName>behavior_FZ130121</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>imagej.public</id>
+			<url>http://maven.imagej.net/content/groups/public</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.apple</groupId>
+			<artifactId>quicktime</artifactId>
+			<version>7.7.8</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/QTJava.zip</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>com.labjack</groupId>
+			<artifactId>labjack</artifactId>
+			<version>4.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/labjack.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>com.scioncorp</groupId>
+			<artifactId>scion</artifactId>
+			<version>2.0u</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/scion.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>javax.media</groupId>
+			<artifactId>jmf</artifactId>
+			<version>2.1.1e</version>
+		</dependency>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>ij</artifactId>
+			<version>1.46r</version>
+		</dependency>
+	</dependencies>
+
+</project>

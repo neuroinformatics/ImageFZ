@@ -1,0 +1,27 @@
+#state	trigger(ROI)	nextState
+#LR DiscriminationのOfflineで使用。
+ST1	2	ST2
+ST1	3	RS1
+ST1	1	LS1
+
+ST2	3	RS1
+RS1	4	RS2
+RS2	5	ST1
+
+ST2	1	LS1
+LS1	6	LS2
+LS2	5	ST1
+
+#ここから下は、例外的な移動に対応するために書いています。
+ST2	5	ST1
+
+ST1	4	RS02
+ST1	6	LS02
+RS02	5	ST1
+LS02	5	ST1
+
+RS1	2	ST2
+LS1	2	ST2
+
+RS2	3	RS1
+LS2	1	LS1
